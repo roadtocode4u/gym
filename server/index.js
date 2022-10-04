@@ -2,7 +2,7 @@ import express from 'express';
 import dotennv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
-
+import User from './models/User'
 
 
 dotennv.config();
@@ -31,6 +31,21 @@ app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
     message: 'Server is running'
+  })
+})
+
+//Sign-up
+
+app.post('./signup',async(req,res)=>{
+  const user = new User({
+    fullName:"Anand" ,
+    email: "anand2gmail.com",
+    password: "12345",
+    phone:"9876543210"
+  });
+  await user.save();
+  res.send({
+    message: "signup succesfull"
   })
 })
 
