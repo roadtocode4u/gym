@@ -34,7 +34,6 @@ app.get('/health', (req, res) => {
   })
 })
 
-//Sign-up
 app.post('/signup' ,async (req,res)=>{
   const user = new User({
     fullName: req.body.fullName ,
@@ -42,9 +41,11 @@ app.post('/signup' ,async (req,res)=>{
     password: req.body.password,
     phone: req.body.phone
   });
-  await user.save();
+  const savedUser = await user.save();
   res.send({
-    message: "Sign-Up Succesfully..."
+    success: true,
+    data: savedUser,
+    message: "user created successfully"
   })
 })
 
