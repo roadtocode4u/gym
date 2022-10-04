@@ -35,11 +35,13 @@ app.get('/health', (req, res) => {
 })
 
 app.post('/signup' ,async (req,res)=>{
+  const { fullName, email, password , phone}= req.body;
+  
   const user = new User({
-    fullName: req.body.fullName ,
-    email: req.body.email ,
-    password: req.body.password,
-    phone: req.body.phone
+    fullName, 
+    email,
+    password,
+    phone,
   });
   const savedUser = await user.save();
   res.send({
