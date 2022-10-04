@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const UserSchema = mongoose.Schema({
     fullName: {type: String, required: [true,  'Full Name cannot be empty']},
