@@ -42,12 +42,21 @@ app.post('/signup' ,async (req,res)=>{
     password,
     phone,
   });
-  const savedUser = await user.save();
-  res.send({
-    success: true,
-    data: savedUser,
-    message: "user created successfully"
-  })
+  try{
+    const savedUser = await user.save();
+   return res.send({
+      success: true,
+      data: savedUser,
+      message: "user created successfully"
+    })
+  }
+  catch(err){
+    return res.send({
+      success: false,
+      data: null,
+      message: err.message
+    })
+  }
 })
 
 
