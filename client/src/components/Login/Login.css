@@ -1,0 +1,23 @@
+.log-background {
+    background-color: rgb(232, 235, 236);
+    height: 100vh;
+
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    transition: background 0.2s ease-out;
+}
+
+button:hover {
+    background: rgb(250, 149, 131);
+}
