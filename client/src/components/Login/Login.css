@@ -19,7 +19,7 @@ button {
 }
 
 button:hover {
-    background: rgb(250, 149, 131);
+    background: rgb(253, 158, 141);
 }
 
 .Forget-password a{
@@ -43,4 +43,9 @@ button:hover {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 
+}
+.form-label{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
 }
