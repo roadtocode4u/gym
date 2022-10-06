@@ -24,14 +24,14 @@ function Login() {
                   <label for="exampleInputPassword1" className="form-label">Password</label>
                   <input type="password" className="form-control" placeholder='Enter password' id="exampleInputPassword1" />
                 </div>
-                <div>
+                <div className='Forget-password'>
                   <a href="#">Forget password</a>
                 </div>
                 <div>
                   <button type="submit">Log in</button>
                 </div>
-                <div>
-                  <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                <div className='acc-login'>
+                  <p>Don't have an account? <a  className='acc-signup' href="/signup">Sign up</a></p>
                 </div>
               </form>
 
