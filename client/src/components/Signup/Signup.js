@@ -8,50 +8,42 @@ function Signup() {
       <div className="sighup-background">
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
-              <h2 className="text-center mt-2">Sign-Up Form</h2>
-              <form className="mt-3">
-                <div className="mb-3">
-                  <label for="exampleInputFullName" className="form-label">
-                    Enter Your FullName
-                  </label>
+          <h2 className="text-center sign-heading mt-2">Sign-Up Form</h2>
+            <div className="col-md-6">   
+              <form>
+                <div className="mt-5">
                   <input
                     type="text"
                     className="form-control"
                     id="exampleInputFullName"
+                    placeholder="enter your fullname"
                   />
                 </div>
-                <div className="mb-3">
-                  <label for="exampleInputEmail1" className="form-label">
-                    Email address
-                  </label>
+                <div className="mt-4">
                   <input
                     type="email"
                     className="form-control"
                     id="exampleInputEmail1"
+                    placeholder="enter your mail"
                   />
                 </div>
-                <div className="mb-3">
-                  <label for="exampleInputPhone" className="form-label">
-                    Enter Your Phone Number
-                  </label>
+                <div className="mt-4">
                   <input
                     type="number"
                     className="form-control"
                     id="exampleInputPhone"
+                    placeholder="enter your phone number"
                   />
                 </div>
-                <div className="mb-3">
-                  <label for="exampleInputPassword1" className="form-label">
-                    Password
-                  </label>
+                <div className="mt-4">
                   <input
                     type="password"
                     className="form-control"
                     id="exampleInputPassword1"
+                    placeholder="enter your password"
                   />
                 </div>
-                <div className="mb-3 form-check">
+                <div className="mt-4 form-check">
                   <input
                     type="checkbox"
                     className="form-check-input"
@@ -61,14 +53,14 @@ function Signup() {
                     Check me out
                   </label>
                 </div>
-                <button type="submit" className="btn btn-primary w-100">
-                  Submit
+                <button type="submit" className="sign-up-btn w-100">
+                  Signup
                 </button>
               </form>
             </div>
             <div className="col-md-6">
               <img
-                className="img-fluid mx-auto d-block mt-4 "
+                className="img-fluid mx-auto d-block"
                 src={Workoutimg}
                 alt="workout"
               />

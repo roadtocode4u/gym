@@ -2,3 +2,27 @@
     background-color: rgb(232, 235, 236);
     height: 100vh;
 }
+.sign-up-btn{
+    padding: 8px;
+    font-size: 17px;
+    background: rgb(242, 113, 90);
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.2s ease-out;
+    border: 1px double tomato;
+
+}
+.sign-up-btn:hover {
+    background: rgb(253, 158, 141);
+}
+.sign-heading{
+    background-color: rgb(244, 135, 116);
+    border-radius: 10px;
+    border: 1px double black;
+    padding: 10px;
+}
+.img-fluid{
+    width: 450px;
+}
