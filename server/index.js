@@ -68,14 +68,14 @@ app.post('/login', async(req, res)=>{
   })
   if(user) {
     return res.send({
-      status: "success",
-      message: "User logged in successfullty",
+      status: true,
+      message: "User logged in successfully",
       data: user
     })
   }
   else{
    return  res.send({
-      status: "failure",
+      status: false,
       message: "User name or password is incorrect",
     })
   }
