@@ -1,17 +1,51 @@
-
-h2{
-    color: var(--light);
-    font-weight: 600 !important;
+.carousel h2 {
+  color: var(--light);
+  font-weight: 600 !important;
 }
 
-
-h3{
-    color: var(--light);
-    font-weight: 800 !important;
+.carousel h3 {
+  color: var(--light);
+  font-weight: 800 !important;
 }
 
-a{
-    color: var(--light);
-    font-weight: 500 !important;
+.carousel a {
+  color: var(--light);
+  font-weight: 500 !important;
 }
 
+.gym-class-box-left{
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.gym-class-box-right {
+  background-color: var(--primary);
+}
+
+.gym-class {
+  position: relative;
+  margin-top: 90px;
+}
+.gym-class .gym-class-box {
+  min-height: 450px;
+}
+@media (min-width: 992px) {
+  .gym-class {
+    margin-top: -50px;
+    z-index: 1;
+  }
+}
+.gym-class i {
+  position: absolute;
+  font-size: 200px;
+  line-height: 200px;
+  bottom: 0;
+  color: #fff;
+  opacity: 0.1;
+}
+.gym-class .gym-class-box.text-right i {
+  left: 0;
+}
+.gym-class .gym-class-box.text-left i {
+  right: 0;
+}

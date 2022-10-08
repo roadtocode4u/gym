@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 import "./NavBar.css";
 import Logo from "../../assets/logo.png";
 
 function NavBar() {
   return (
-   <>
-    
+    <>
       {/* NavBar start */}
       <div className="container-fluid p-0 nav-bar">
         <nav className="navbar navbar-expand-lg navbar-expand-sm py-3 justify-content-between">
@@ -14,7 +13,10 @@ function NavBar() {
           </div>
           <div className="justify-content-between nav-right">
             <div className="navbar-nav p-3 float-right">
-              <a href="index.html" className="nav-item nav-link active text-light">
+              <a
+                href="index.html"
+                className="nav-item nav-link active text-light"
+              >
                 Home
               </a>
               <a href="about.html" className="nav-item nav-link">
@@ -37,9 +39,8 @@ function NavBar() {
         </nav>
       </div>
       {/* NavBar end */}
-
-   </>
-  )
+    </>
+  );
 }
 
-export default NavBar
+export default NavBar;

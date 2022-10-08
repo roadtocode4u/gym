@@ -5,24 +5,23 @@
   font-size: 1.2em;
   margin-right: 10px;
   overflow: hidden;
-  
 }
 
-.nav-bar{
-    z-index: 1;
-    position: absolute;
+.nav-bar {
+  z-index: 1;
+  position: absolute;
 }
 
 .nav-left {
-    box-sizing: border-box;
+  box-sizing: border-box;
   background-color: var(--dark) !important;
   border-radius: 20px;
   padding: 10px 10px 10px 10px;
   margin-left: 3em;
 }
 
-.nav-right{
-    box-sizing: border-box;
+.nav-right {
+  box-sizing: border-box;
   background-color: var(--dark) !important;
   border-radius: 5px;
   padding: 5px 25px 5px 25px;
