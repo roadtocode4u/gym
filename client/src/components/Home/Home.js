@@ -6,6 +6,10 @@ import Carousel from "react-bootstrap/Carousel";
 import Carousel1 from "./img/carousel-1.jpg";
 import Carousel2 from "./img/carousel-2.jpg";
 import Carousel3 from "./img/carousel-3.jpg";
+import Feature1 from "./img/feature-1.jpg";
+import Feature2 from "./img/feature-2.jpg";
+import Feature3 from "./img/feature-3.jpg";
+import Feature4 from "./img/feature-4.jpg"; 
 
 function Home() {
   return (
@@ -101,7 +105,113 @@ function Home() {
 {/* Gym Class cards end */}
 
 {/* Why choose us starts */}
+<div class="container feature pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="">Why Choose Us?</h4>
+            <h5 class="display-3 font-weight-bold">Benifits of Joining Our GYM</h5>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src={Feature1} alt="Image"/>
+                
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Videos Instruction</h4>
+                        <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima  erat tempor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src={Feature2} alt="Image"/>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Training Calendar</h4>
+                        <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima  erat tempor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src={Feature3} alt="Image"/>
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Free Apps & WiFi</h4>
+                        <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima  erat tempor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src={Feature4} alt="Image"/>
+                       
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Community Support</h4>
+                        <p>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima  erat tempor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/* Why choose us ends */}
 
+{/* BMI Calculator Starts */}
+
+
+<div class="container-fluid position-relative bmi my-5">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+                <div class="col-md-6">
+                    <div class="pr-md-3 d-none d-md-block">
+                        <h4 class="text-light">Body Mass Index </h4>
+                        <h4 class="display-5 text-white font-weight-bold mb-4">Whate is BMI?</h4>
+                        <h5 class="m-0 text-white">BMI is a measure of body fat based on height and weight that applies to both adult men and women.</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 py-5 bmi-calculator">
+                    <div class="py-5 px-3">
+                        <h1 class="mb-4 text-white">Calculate your BMI</h1>
+                        <form>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Weight (KG)"/>
+                                </div>
+                                <div class="col form-group">
+                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Height (CM)"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Age"/>
+                                </div>
+                                <div class="col form-group">
+                                    <select class="custom-select custom-select-lg bg-dark text-muted">
+                                        <option>Gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="button" class="btn btn-lg btn-block btn-dark border-light"
+                                        value="Calculate Now"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{/* BMI Calculator Ends */}
 
     </>
   );
