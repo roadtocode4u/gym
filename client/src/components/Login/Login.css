@@ -49,3 +49,14 @@ button:hover {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
+
+.login-heading{
+    background-color: rgb(244, 135, 116);
+    border-radius: 10px;
+    border: 1px double black;
+    padding: 10px;
+}
+
+.img-fluid{
+    width: 450px;
+}
