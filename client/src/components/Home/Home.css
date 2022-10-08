@@ -1,0 +1,25 @@
+.nav-bar{
+    height: 100px;
+}
+
+.nav-right{
+   float: right !important;
+    color: var(--primary);
+}
+
+
+.nav-left{
+    float: left;
+}
+
+.navbar-nav{
+    float: right !important;
+    color: var(--primary);
+    background-color: var(--dark) !important;
+    border-radius: 5px;
+    font-size: large;
+}
+
+p{
+    color: var(--primary);
+}
