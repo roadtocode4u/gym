@@ -2,6 +2,8 @@ import React from "react";
 import "./Home.css";
 import "../../index.css";
 import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
+
 import Carousel from "react-bootstrap/Carousel";
 import Carousel1 from "./img/carousel-1.jpg";
 import Carousel2 from "./img/carousel-2.jpg";
@@ -10,6 +12,7 @@ import Feature1 from "./img/feature-1.jpg";
 import Feature2 from "./img/feature-2.jpg";
 import Feature3 from "./img/feature-3.jpg";
 import Feature4 from "./img/feature-4.jpg"; 
+
 
 function Home() {
   return (
@@ -212,6 +215,8 @@ function Home() {
     </div>
     
 {/* BMI Calculator Ends */}
+
+<Footer/>
 
     </>
   );
