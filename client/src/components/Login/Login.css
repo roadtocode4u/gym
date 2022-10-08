@@ -1,0 +1,62 @@
+.log-background {
+    background-color: rgb(232, 235, 236);
+    height: 100vh;
+
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    transition: background 0.2s ease-out;
+}
+
+button:hover {
+    background: rgb(253, 158, 141);
+}
+
+.Forget-password a{
+    font-size: 14px;
+    color: tomato;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.acc-signup{
+    font-size: 16px;
+    color: rgb(251, 122, 99);
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+.acc-login{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: right;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+
+}
+.form-label{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.login-heading{
+    background-color: rgb(244, 135, 116);
+    border-radius: 10px;
+    border: 1px double black;
+    padding: 10px;
+}
+
+.img-fluid{
+    width: 450px;
+}
