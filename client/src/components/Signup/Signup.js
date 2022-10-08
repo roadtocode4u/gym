@@ -1,9 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Signup.css";
+import axios from 'axios'
 import Workoutimg from "./img/Signupworkoutimg.png";
 
 function Signup() {
+const [fullName, setFullName] = useState("");
+const [email, setEmail] = useState("");
+const [phone, setPhone] = useState("");
+const [password, setPassword] = useState("");
+
+async function addUser()
+{
+  await axios.post('/signup',{
+    fullName: fullName,
+    email: email,
+    phone: phone,
+    password: password,
+  })
+
+    setFullName("");
+    setEmail("");
+    setPhone("");
+    setPassword("");
+
+    alert("user added successfully")
+}
+ 
   return (
+
     <>
       <div className="sighup-background">
         <div className="container">
@@ -16,7 +40,8 @@ function Signup() {
                     type="text"
                     className="form-control"
                     id="exampleInputFullName"
-                    placeholder="enter your fullname"
+                    placeholder="Enter Fullname"
+                    value={fullName} onChange={(e)=>{setFullName(e.target.value)}}
                   />
                 </div>
                 <div className="mt-4">
@@ -24,7 +49,8 @@ function Signup() {
                     type="email"
                     className="form-control"
                     id="exampleInputEmail1"
-                    placeholder="enter your mail"
+                    placeholder="Enter Email"
+                    value={email} onChange={(e)=>{setEmail(e.target.value)}}
                   />
                 </div>
                 <div className="mt-4">
@@ -32,7 +58,8 @@ function Signup() {
                     type="number"
                     className="form-control"
                     id="exampleInputPhone"
-                    placeholder="enter your phone number"
+                    placeholder="Enter Phone Number"
+                    value={phone} onChange={(e)=>{setPhone(e.target.value)}}
                   />
                 </div>
                 <div className="mt-4">
@@ -40,20 +67,11 @@ function Signup() {
                     type="password"
                     className="form-control"
                     id="exampleInputPassword1"
-                    placeholder="enter your password"
+                    placeholder="Enter Password"
+                    value={password} onChange={(e)=>{setPassword(e.target.value)}}
                   />
                 </div>
-                <div className="mt-4 form-check">
-                  <input
-                    type="checkbox"
-                    className="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label className="form-check-label" for="exampleCheck1">
-                    Check me out
-                  </label>
-                </div>
-                <button type="submit" className="sign-up-btn w-100">
+                <button type="button" className="sign-up-btn w-100" onClick={addUser}>
                   Signup
                 </button>
               </form>
