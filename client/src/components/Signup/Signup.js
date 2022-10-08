@@ -11,19 +11,25 @@ const [password, setPassword] = useState("");
 
 async function addUser()
 {
-  await axios.post('/signup',{
+   const response = await axios.post('/signup',{
     fullName: fullName,
     email: email,
     phone: phone,
     password: password,
   })
+    
 
+  if(response.data.success)
+  {
+    alert("Signup Successfull")
+  }
+  else{
+    alert(response.data.message)
+  }
     setFullName("");
     setEmail("");
     setPhone("");
     setPassword("");
-
-    alert("user added successfully")
 }
  
   return (
