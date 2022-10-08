@@ -35,9 +35,9 @@ app.get('/health', (req, res) => {
 
 app.post('/signup' ,async (req,res)=>{
   const { fullName, email, password , phone}= req.body;
-  
+
   const user = new User({
-    fullName, 
+    fullName,
     email,
     password,
     phone,
