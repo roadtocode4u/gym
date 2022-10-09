@@ -45,8 +45,8 @@ async function addUser()
                   <input
                     type="text"
                     className="form-control"
-                    id="exampleInputFullName"
-                    placeholder="Enter Fullname"
+                    id="userFullName"
+                    placeholder="Enter FullName"
                     value={fullName} onChange={(e)=>{setFullName(e.target.value)}}
                   />
                 </div>
@@ -54,7 +54,7 @@ async function addUser()
                   <input
                     type="email"
                     className="form-control"
-                    id="exampleInputEmail1"
+                    id="userEmail"
                     placeholder="Enter Email"
                     value={email} onChange={(e)=>{setEmail(e.target.value)}}
                   />
@@ -63,7 +63,7 @@ async function addUser()
                   <input
                     type="number"
                     className="form-control"
-                    id="exampleInputPhone"
+                    id="userPhoneNumber"
                     placeholder="Enter Phone Number"
                     value={phone} onChange={(e)=>{setPhone(e.target.value)}}
                   />
@@ -72,7 +72,7 @@ async function addUser()
                   <input
                     type="password"
                     className="form-control"
-                    id="exampleInputPassword1"
+                    id="userPassword"
                     placeholder="Enter Password"
                     value={password} onChange={(e)=>{setPassword(e.target.value)}}
                   />
