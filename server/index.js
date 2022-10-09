@@ -2,8 +2,10 @@ import express from 'express';
 import dotennv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
-import md5 from 'md5';
-import User from './models/User.js'
+
+import {health} from "./controllers/health.js";
+import {signupPost} from "./controllers/signup.js";
+import {loginPost} from "./controllers/login.js";
 
 
 dotennv.config();
@@ -27,60 +29,9 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-app.get('/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    message: 'Server is running'
-  })
-})
-
-app.post('/signup' ,async (req,res)=>{
-  const { fullName, email, password , phone}= req.body;
-
-  const user = new User({
-    fullName,
-    email,
-    password: md5(password),
-    phone,
-  });
-  try{
-    const savedUser = await user.save();
-   return res.send({
-      success: true,
-      data: savedUser,
-      message: "user created successfully"
-    })
-  }
-  catch(err){
-    return res.send({
-      success: false,
-      data: null,
-      message: err.message
-    })
-  }
-})
-
-
-app.post('/login', async(req, res)=>{
-  const { email, password} = req.body;
-  const user = await User.findOne({
-    email,
-    password: md5(password),
-  })
-  if(user) {
-    return res.send({
-      status: "success",
-      message: "User logged in successfullty",
-      data: user
-    })
-  }
-  else{
-   return  res.send({
-      status: "failure",
-      message: "User name or password is incorrect",
-    })
-  }
-})
+app.get('/health', health)
+app.post('/signup', signupPost)
+app.post('/login', loginPost)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
