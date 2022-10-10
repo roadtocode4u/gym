@@ -13,7 +13,7 @@
   font-weight: 500 !important;
 }
 
-.gym-class-box-left{
+.gym-class-box-left {
   background-color: var(--dark);
   color: var(--light);
 }
@@ -50,7 +50,8 @@
   right: 0;
 }
 
-.feature h4,h5{
+.feature h4,
+h5 {
   color: var(--primary);
   font-weight: 600;
 }
@@ -59,71 +60,67 @@
   color: var(--dark);
   font-weight: 500;
 }
-.feature img{
+.feature img {
   border-radius: 10px;
 }
- 
+
 @media (max-width: 767.98px) {
   .bmi {
     background: #111;
   }
 }
 
-  .bmi::after {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(./img/carousel-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }
+.bmi::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./img/carousel-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
 
-  .form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
-  .form-control-lg {
-    height: calc(1.5em + 1rem + 2px);
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
+.form-control-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
 
-  .form-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;
-    margin-top: 10px;
-  }
-  .form-row > .col,
-  .form-row > [class*="col-"] {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  margin-top: 10px;
+}
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 
-  .bmi-calculator{
-    background-color: var(--dark);
-  }
-
-
-
-
+.bmi-calculator {
+  background-color: var(--dark);
+}
