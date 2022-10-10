@@ -52,13 +52,13 @@ function Login() {
             <div className="col-md-6">
               <form className="mt-5">
                 <div className="mb-4">
-                  <label for="exampleInputEmail" className="form-label">Enter email address</label>
-                  <input type="email" className="form-control" placeholder='example@gmail.com' id="exampleInputEmail"
+                  <label for="InputEmail" className="form-label">Enter email address</label>
+                  <input type="email" className="form-control" placeholder='example@gmail.com' id="InputEmail"
                   value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="mb-4">
-                  <label for="exampleInputPassword" className="form-label">Enter password</label>
-                  <input type="password" className="form-control" placeholder='Enter password' id="exampleInputPassword" 
+                  <label for="InputPassword" className="form-label">Enter password</label>
+                  <input type="password" className="form-control" placeholder='Enter password' id="InputPassword" 
                   value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
 
