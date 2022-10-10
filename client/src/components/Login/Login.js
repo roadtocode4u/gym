@@ -1,42 +1,28 @@
-import React , {useEffect, useState}from 'react'
-import {useNavigate} from 'react-router-dom';
+import React , {useState}from 'react'
 import axios from 'axios';
 import "./Login.css";
 
 import Workout from "./img/gymlogin.png";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const navigate = useNavigate();
-  const [email, setEmail] = useState([]);
-  const [password, setPassword] = useState([]);
-
-  async function loginUser(e){
-    e.preventDefault();
-    if(
-      email === "" || 
-      password === ""
-    )
-    {
-      alert("Please fill all the fields");
+  async function loginUser(){
+    const response = await axios.post('/login',{
+      email: email,
+      password: password,
+    })
+    if (response.data.success){
+      alert("Login Successfully")
     }
     else{
-      const response = await axios.post('/login',
-      {
-        email: email,
-        password: password,
-      })
-      if(response.data.status)
-      {
-        alert("Login Successfully")
-        navigate('/home')
-      }
-      else{
-        alert("Invalid Credentials")
-      }
+      alert(response.data.message)
     }
+    setEmail("");
+    setPassword("");
   }
-  
+
 
   
   return (
@@ -82,4 +68,4 @@ function Login() {
   }
 
 
-export default Login
+export default Login;
