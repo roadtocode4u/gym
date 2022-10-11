@@ -1,5 +1,7 @@
-
 import "./Login.css";
+import ImgLoginGirl from "./img/login-girl.png";
+
+
 
 
 
@@ -16,9 +18,9 @@ function Login() {
             <div className="row">
               <div className="col-md-6">
                 <img
-                  className="img-fluid mx-auto d-block"
-                //src={headerImage}
-                //alt="workout"
+                  className="img-boy mx-auto d-block"
+                src={ImgLoginGirl}
+                alt="workout"
                 />
 
               </div>
