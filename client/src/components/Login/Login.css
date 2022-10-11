@@ -1,60 +1,57 @@
-.log-background {
-    background-color: rgb(232, 235, 236);
+.btn-login{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .admin-login{
+    background-color: #fff;
+     padding: 20px;
+     margin-top: 30px;
+     border-radius: 10px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     box-shadow: 5px 5px 10px 2px gray;
+ }
+ .img-login{
+     width: 100px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ 
+ }
+ .title-container{
+    background-color: white;
+    /* border: 3px double black; */
+    box-shadow: 2px 2px 5px 1px gray;
+    padding: 1px;
+    border-radius: 30px;
+    background: var(--primary);
+    color: white;
+  }
+  
+  .custom-btn{
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 2px rgba(0,0,0,0.5);
+    background: var(--primary);
+    color: white;
+    font-size: 20px;
+    border: 0.5px solid black;
+  
+  }
+  
+  .custom-btn:hover{
+    box-shadow: 3px 3px 2px black;
+  }
+  .img-fluid{
+    width: 400px;
+  }
+  .login-anchor{
+    color: blue;
+  }
+  .login-background{
+    background-color: aliceblue;
     height: 100vh;
-}
-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background: tomato;
-    color: #fff;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 15px;
-    transition: background 0.2s ease-out;
-}
-
-button:hover {
-    background: rgb(253, 158, 141);
-}
-
-.Forget-password a{
-    font-size: 14px;
-    color: tomato;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-}
-
-.acc-signup{
-    font-size: 16px;
-    color: rgb(251, 122, 99);
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-}
-.acc-login{
-    margin-top: 10px;
-    font-size: 15px;
-    text-align: right;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-
-}
-.form-label{
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-}
-
-.login-heading{
-    background-color: rgb(244, 135, 116);
-    border-radius: 10px;
-    border: 1px double black;
-    padding: 10px;
-}
-
-.img-fluid{
-    width: 450px;
-}
+  }

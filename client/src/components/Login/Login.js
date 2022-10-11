@@ -1,46 +1,70 @@
-import React from 'react'
-import "./Login.css"
 
-import Workout from "./img/gymlogin.png";
+import "./Login.css";
+
+
 
 function Login() {
+
   return (
     <>
-      <div className="log-background">
+      <div className="signup-background">
         <div className="container">
-          <div className="row">
-          <h2 className="text-center login-heading mt-2">Login Form</h2>
-            <div className="col-md-6">
-              <img className="img-fluid mx-auto d-block mt-1 " src={Workout} alt="workout" />
-            </div>
+          <div className="title-container">
+            <h1 className="text-center">Login-Form</h1>
+          </div>
+          <div className="admin-login">
+            <div className="row">
+              <div className="col-md-6">
+                <img
+                  className="img-fluid mx-auto d-block"
+                //src={headerImage}
+                //alt="workout"
+                />
 
-            <div className="col-md-6">
-              <form className="mt-5">
-                <div className="mb-4">
-                  <label for="exampleInputEmail1" className="form-label">Enter email address</label>
-                  <input type="email" className="form-control" placeholder='example@gmail.com' id="exampleInputEmail1" />
+              </div>
+              <div className="col-md-6">
+                <form>
+
+                  <div className="mt-4">
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="userEmail"
+                      placeholder="Enter Email"
+
+
+                    />
+
+                  </div>
+                  <div className="mt-4">
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="userPassword"
+                      placeholder="Enter Password"
+
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <button
+                      type="button"
+                      className="custom-btn  btn-lg btn-login mt-3">
+                      Login
+                    </button>
+                  </div>
+                  <h5 className="text-center mt-3">
+                    {" "}
+                    Dont have an account? <a href="./signup" className="login-anchor">Sign up</a>
+                  </h5>
+                </form> 
                 </div>
-                <div className="mb-4">
-                  <label for="exampleInputPassword1" className="form-label">Enter password</label>
-                  <input type="password" className="form-control" placeholder='Enter password' id="exampleInputPassword1" />
-                </div>
-                <div className='Forget-password'>
-                  <a href="#">Forget password?</a>
-                </div>
-                <div>
-                  <button type="submit">Log in</button>
-                </div>
-                <div className='acc-login'>
-                  <p>Don't have an account? <a  className='acc-signup' href="/signup">Sign up</a></p>
-                </div>
-              </form>
             </div>
           </div>
         </div>
       </div>
     </>
-
-  )
+  );
 }
 
-export default Login
+export default Login;
