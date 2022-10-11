@@ -24,7 +24,7 @@ function Login() {
   }
 
 
-  
+
   return (
     <>
       <div className="log-background">
@@ -44,7 +44,7 @@ function Login() {
                 </div>
                 <div className="mb-4">
                   <label for="InputPassword" className="form-label">Enter password</label>
-                  <input type="password" className="form-control" placeholder='Enter password' id="InputPassword" 
+                  <input type="password" className="form-control" placeholder='Enter password' id="InputPassword"
                   value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
 
@@ -52,7 +52,7 @@ function Login() {
                   <a href="#">Forget password?</a>
                 </div>
                 <div>
-                  <button onClick={loginUser}>Log in</button>
+                  <button type="button" onClick={loginUser}>Log in</button>
                 </div>
                 <div className='acc-login'>
                   <p>Don't have an account? <a  className='acc-signup' href="/signup">Sign up</a></p>
