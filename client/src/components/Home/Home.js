@@ -167,8 +167,7 @@ function Home() {
 {/* BMI Calculator Starts */}
 
 
-<div class="container-fluid position-relative bmi my-5">
-        <div class="container">
+<div class="position-relative bmi my-5">
             <div class="row px-3 align-items-center">
                 <div class="col-md-6">
                     <div class="pr-md-3 d-none d-md-block">
@@ -194,7 +193,7 @@ function Home() {
                                     <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Age"/>
                                 </div>
                                 <div class="col form-group">
-                                    <select class="custom-select custom-select-lg bg-dark text-muted">
+                                    <select class="form-control form-control-lg custom-select bg-dark text-muted">
                                         <option>Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -203,7 +202,7 @@ function Home() {
                             </div>
                             <div class="form-row">
                                 <div class="col">
-                                    <input type="button" class="btn btn-lg btn-block btn-dark border-light"
+                                    <input type="button" class="btn btn-lg btn-block btn-dark border-light w-100"
                                         value="Calculate Now"/>
                                 </div>
                             </div>
@@ -212,7 +211,6 @@ function Home() {
                 </div>
             </div>
         </div>
-    </div>
     
 {/* BMI Calculator Ends */}
 
