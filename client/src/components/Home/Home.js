@@ -215,8 +215,6 @@ function Home() {
 {/* BMI Calculator Ends */}
 
 <Footer/>
-
-
     </>
   );
 }
