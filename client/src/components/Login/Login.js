@@ -13,7 +13,9 @@ function Login() {
       email: email,
       password: password,
     })
-    if (response.data.success){
+    if (response.data.status){
+      // save user data in localStorage to access current user
+       localStorage.setItem('currentUser',  JSON.stringify(response.data.data))
       alert("Login Successfully")
     }
     else{
