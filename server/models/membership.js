@@ -1,82 +1,60 @@
 import mongoose from "mongoose";
 
 const membershipSchema = mongoose.Schema({
-    membershipName: {
-        type: String,
-        required: [true, "Name cannot be empty"],
+    userReference: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: [true, "User reference cannot be empty"],
         index: true,
     },
-    membershipEmail: {
-        type: String,
-        required: [true, "Email cannot be empty"],
-        index: true,
-        unique: true,
-    },
-    membershipPhone: {
-        type: String,
-        required: [true, "Phone number cannot be empty"],
-        index: true,
-        unique: true,
-    },
-    membershipAge: {
+    age: {
         type: Number,
         required: [true, "Age cannot be empty"],
         index: true,
     },
-    membershipGender: {
+    gender: {
         type: String,
         required: [true, "Gender cannot be empty"],
-        index: true,
     },
-    membershipHeight: {
+    height: {
         type: Number,
         required: [true, "Height cannot be empty"],
-        index: true,
     },
-    membershipWeight: {
+    weight: {
         type: Number,
         required: [true, "Weight cannot be empty"],
-        index: true,
     },
-    membershipBMI: {
+    BMI: {
         type: Number,
         required: [true, "BMI cannot be empty"],
-        index: true,
     },
-    membershipPlan: {
+    plan: {
         type: String,
         required: [true, "Plan cannot be empty"],
-        index: true,
     },
-    membershipDescription: {
+    description: {
         type: String,
         required: [true, "Description cannot be empty"],
-        index: true,
     },
-    membershipDuration: {
+    duration: {
         type: Number,
         required: [true, "Membership Duration cannot be empty"],
-        index: true,
     },
-    membershipAmount: {
+    amount: {
         type: String,
         required: [true, "Amount cannot be empty"],
-        index: true,
     },
-    membershipPaymentMethod: {
+    paymentMethod: {
         type: String,
         required: [true, "Membership Payment Method cannot be empty"],
-        index: true,
     },
-    membershipPaymentDate: {
+    paymentDate: {
         type: String,
         required: [true, "Membership Payment Date cannot be empty"],
-        index: true,
     },
-    membershipActive: {
+    isActive: {
         type: Boolean,
         required: [true, "Membership Active cannot be empty"],
-        index: true,
     },
 });
 
