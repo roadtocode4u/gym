@@ -1,12 +1,10 @@
-import Subscription from "../models/Subscription";
+import Subscription from "../models/Subscription.js";
 
-const createSubscription = async (req, res) => {
-  const { name, email, phone, plan, duration, amount, paymentMethod } =
+export const createSubscription = async (req, res) => {
+  const { user, plan, duration, amount, paymentMethod } =
     req.body;
   const subscription = await Subscription.create({
-    name,
-    email,
-    phone,
+    user,
     plan,
     duration,
     amount,
@@ -26,7 +24,7 @@ const createSubscription = async (req, res) => {
   });
 };
 
-const getSubscription = async (req, res) => {
+export const getSubscription = async (req, res) => {
   const subscription = await Subscription.find({});
   if (subscription) {
     return res.send({
@@ -42,7 +40,7 @@ const getSubscription = async (req, res) => {
   });
 };
 
-const updateSubscription = async (req, res) => {
+export const updateSubscription = async (req, res) => {
   const subscription = await Subscription.findByIdAndUpdate(
     req.params.id,
     req.body,
@@ -62,7 +60,7 @@ const updateSubscription = async (req, res) => {
   });
 };
 
-const deleteSubscription = async (req, res) => {
+export const subscriptionDelete = async (req, res) => {
   const subscription = await Subscription.findByIdAndDelete(req.params.id);
   if (subscription) {
     return res.send({
@@ -76,11 +74,4 @@ const deleteSubscription = async (req, res) => {
     message: "Subscription not deleted",
     data: subscription,
   });
-};
-
-export default {
-  createSubscription,
-  getSubscription,
-  updateSubscription,
-  deleteSubscription,
-};
+}

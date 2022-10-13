@@ -6,9 +6,9 @@ import mongoose from "mongoose";
 import { health } from "./controllers/health.js";
 import { signupPost } from "./controllers/signup.js";
 import { loginPost } from "./controllers/login.js";
-import { subscriptionPost } from "./controllers/subscription.js";
-import { subscriptionGet } from "./controllers/subscription.js";
-import { subscriptionPut } from "./controllers/subscription.js";
+import { createSubscription } from "./controllers/subscription.js";
+import { getSubscription } from "./controllers/subscription.js";
+import { updateSubscription } from "./controllers/subscription.js";
 import { subscriptionDelete } from "./controllers/subscription.js";
 
 
@@ -16,18 +16,24 @@ dotennv.config();
 const app = express();
 app.use(express.json());
 
+
 const PORT = process.env.PORT || 5000;
-try {
-  mongoose.connect(
-    process.env.MONGO_DB_URL,
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    () => {
-      console.log("Connected to DB 📦");
-    }
-  );
-} catch (err) {
+try{
+  mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+    console.log('Connected to DB 📦');
+  });
+}catch(err){
   console.log(`❌ Error:  ${err?.message}`);
 }
+
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+
+  app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+  });
+}
+
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "..", "client", "build")));
@@ -40,9 +46,10 @@ if (process.env.NODE_ENV === "production") {
 app.get("/health", health);
 app.post("/signup", signupPost);
 app.post("/login", loginPost);
-app.post("/subscription", subscriptionPost);
-app.get("/subscription", subscriptionGet);
-app.put("/subscription/:id", subscriptionPut);
+
+app.post("/subscription", createSubscription);
+app.get("/subscription", getSubscription);  
+app.put("/subscription/:id", updateSubscription);
 app.delete("/subscription/:id", subscriptionDelete);
 
 

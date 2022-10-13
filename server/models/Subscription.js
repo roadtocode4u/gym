@@ -2,17 +2,7 @@ import mongoose from "mongoose";
 
 const subscriptionSchema = mongoose.Schema(
   {
-    name: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: [true, "User cannot be empty"],
-    },
-    email: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: [true, "User cannot be empty"],
-    },
-    phone: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: [true, "User cannot be empty"],
