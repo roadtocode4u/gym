@@ -1,6 +1,6 @@
-import md5 from 'md5';
+import md5 from "md5";
 
-import User from './../models/User.js'
+import User from "./../models/User.js";
 
 export const signupPost = async (req, res) => {
   const { fullName, email, password, phone } = req.body;
@@ -16,14 +16,13 @@ export const signupPost = async (req, res) => {
     return res.send({
       success: true,
       data: savedUser,
-      message: "user created successfully"
-    })
-  }
-  catch (err) {
+      message: "user created successfully",
+    });
+  } catch (err) {
     return res.send({
       success: false,
       data: null,
-      message: err.message
-    })
+      message: err.message,
+    });
   }
-}
+};
