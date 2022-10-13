@@ -45,8 +45,10 @@ const membershipSchema = mongoose.Schema({
         required: [true, "Membership Active cannot be empty"],
     },
     subscription: {
-        type: String,
-        required: [true, "Subscription cannot be empty"],
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Subscription",
+        required: [true, "Subscription reference cannot be empty"],
+        index: true,
     },
 });
 
