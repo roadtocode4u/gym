@@ -48,36 +48,20 @@ export default  function Login() {
                 <form>
 
                   <div className="mt-4">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="userEmail"
-                      placeholder="Enter Email"
-
-
-                    />
-
+                    <input type="email" className="form-control" id="userEmail" placeholder="Enter Email"
+                      value={email} onChange={(e) => setEmail(e.target.value)} />
                   </div>
                   <div className="mt-4">
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="userPassword"
-                      placeholder="Enter Password"
-
-                    />
+                    <input type="password" className="form-control" id="userPassword" placeholder="Enter Password"
+                      value={password} onChange={(e) => setPassword(e.target.value)} />
                   </div>
 
                   <div className="mb-4">
-                    <button
-                      type="button"
-                      className="custom-btn  btn-lg btn-login mt-3">
-                      Login
-                    </button>
+                    <button type="button" className="custom-btn  btn-lg btn-login mt-3" onClick={loginUser}>Login</button>
                   </div>
                   <h5 className="text-center mt-3">
                     {" "}
-                    Dont have an account? <a href="./signup" className="login-anchor">Sign up</a>
+                    Don't have an account? <a href="./signup" className="login-anchor">Sign up</a>
                   </h5>
                 </form>
                 
