@@ -6,6 +6,7 @@ import imgcat from "./img/cat-image.jpg";
 function Dashboard() {
   return (
     <>
+    {/* dashboard */}
       <div className="container">
         <div className="card user-card mt-2">
           <div className="row">
