@@ -1,11 +1,28 @@
+import React , {useState}from 'react'
+import axios from 'axios';
 import "./Login.css";
-import ImgLoginGirl from "./img/login-girl.png";
-
-
-
 
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function loginUser(){
+    const response = await axios.post('/login',{
+      email: email,
+      password: password,
+    })
+    if (response.data.status){
+      // save user data in localStorage to access current user
+       localStorage.setItem('currentUser',  JSON.stringify(response.data.data))
+      alert("Login Successfully")
+    }
+    else{
+      alert(response.data.message)
+    }
+    setEmail("");
+    setPassword("");
+  }
 
   return (
     <>
@@ -60,6 +77,27 @@ function Login() {
                     Dont have an account? <a href="./signup" className="login-anchor">Sign up</a>
                   </h5>
                 </form> 
+            <div className="col-md-6">
+              <form className="mt-5">
+                <div className="mb-4">
+                  <label for="InputEmail" className="form-label">Enter email address</label>
+                  <input type="email" className="form-control" placeholder='example@gmail.com' id="InputEmail"
+                  value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className="mb-4">
+                  <label for="InputPassword" className="form-label">Enter password</label>
+                  <input type="password" className="form-control" placeholder='Enter password' id="InputPassword"
+                  value={password} onChange={(e) => setPassword(e.target.value)} />
+                </div>
+
+                <div className='Forget-password'>
+                  <a href="#">Forget password?</a>
+                </div>
+                <div>
+                  <button type="button" onClick={loginUser}>Log in</button>
+                </div>
+                <div className='acc-login'>
+                  <p>Don't have an account? <a  className='acc-signup' href="/signup">Sign up</a></p>
                 </div>
             </div>
           </div>
