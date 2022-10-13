@@ -26,6 +26,22 @@ const createSubscription = async (req, res) => {
   });
 };
 
+const getSubscription = async (req, res) => {
+  const subscription = await Subscription.find({});
+  if (subscription) {
+    return res.send({
+      success: true,
+      message: "Subscription fetched successfully",
+      data: subscription,
+    });
+  }
+  return res.send({
+    success: false,
+    message: "Subscription not fetched",
+    data: subscription,
+  });
+};
+
 const updateSubscription = async (req, res) => {
   const subscription = await Subscription.findByIdAndUpdate(
     req.params.id,
@@ -38,13 +54,12 @@ const updateSubscription = async (req, res) => {
       message: "Subscription updated successfully",
       data: subscription,
     });
-  } else {
-    return res.send({
-      success: false,
-      message: "Subscription not updated",
-      data: subscription,
-    });
   }
+  return res.send({
+    success: false,
+    message: "Subscription not updated",
+    data: subscription,
+  });
 };
 
 const deleteSubscription = async (req, res) => {
@@ -55,22 +70,17 @@ const deleteSubscription = async (req, res) => {
       message: "Subscription deleted successfully",
       data: subscription,
     });
-  } else {
-    return res.send({
-      success: false,
-      message: "Subscription not deleted",
-      data: subscription,
-    });
   }
+  return res.send({
+    success: false,
+    message: "Subscription not deleted",
+    data: subscription,
+  });
 };
-
-
-
 
 export default {
   createSubscription,
+  getSubscription,
   updateSubscription,
   deleteSubscription,
 };
-
-
