@@ -1,9 +1,11 @@
 import React , {useState}from 'react'
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import "./Login.css";
 
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,6 +18,7 @@ function Login() {
       // save user data in localStorage to access current user
        localStorage.setItem('currentUser',  JSON.stringify(response.data.data))
       alert("Login Successfully")
+      navigate('/')
     }
     else{
       alert(response.data.message)
