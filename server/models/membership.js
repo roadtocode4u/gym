@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const membershipSchema = mongoose.Schema({
-    userReference: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: [true, "User reference cannot be empty"],
@@ -18,31 +18,31 @@ const membershipSchema = mongoose.Schema({
     },
     height: {
         type: Number,
-        required: [true, "Height cannot be empty"],
+        default: true
     },
     weight: {
         type: Number,
-        required: [true, "Weight cannot be empty"],
+        default: true
     },
     BMI: {
         type: Number,
-        required: [true, "BMI cannot be empty"],
+        default: true
     },
     timeSlot: {
         type: String,
-        required: [true, "Time slot cannot be empty"],
+        default: true
     },
     plan: {
         type: String,
-        required: [true, "Plan cannot be empty"],
+        default: true
     },
     description: {
         type: String,
-        required: [true, "Description cannot be empty"],
+        default: true
     },
     isActive: {
         type: Boolean,
-        required: [true, "Membership Active cannot be empty"],
+        default: true
     },
     subscription: {
         type: mongoose.Schema.Types.ObjectId,
