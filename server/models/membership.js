@@ -40,6 +40,22 @@ const membershipSchema = mongoose.Schema({
         type: String,
         required: [true, "Description cannot be empty"],
     },
+    duration: {
+        type: Number,
+        required: [true, "Membership Duration cannot be empty"],
+    },
+    amount: {
+        type: String,
+        required: [true, "Amount cannot be empty"],
+    },
+    paymentMethod: {
+        type: String,
+        required: [true, "Membership Payment Method cannot be empty"],
+    },
+    paymentDate: {
+        type: String,
+        required: [true, "Membership Payment Date cannot be empty"],
+    },
     isActive: {
         type: Boolean,
         required: [true, "Membership Active cannot be empty"],

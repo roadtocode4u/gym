@@ -36,6 +36,8 @@
 .nav-bar a:hover {
   color: var(--secondary) !important;
   text-decoration: underline;
+  transition: 0.3s;
+
 }
 
 .navbar a.active {
@@ -50,7 +52,6 @@
 @media screen and (max-width: 768px) {
   .navbar {
     background-color: var(--dark) !important;
-
     margin: auto 0;
   }
 
