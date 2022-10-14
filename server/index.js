@@ -6,6 +6,11 @@ import mongoose from 'mongoose';
 import {health} from "./controllers/health.js";
 import {signupPost} from "./controllers/signup.js";
 import {loginPost} from "./controllers/login.js";
+import {createSubscription} from "./controllers/subscription.js";
+import {getSubscription} from "./controllers/subscription.js";
+import {updateSubscription} from "./controllers/subscription.js";
+import {subscriptionDelete} from "./controllers/subscription.js";
+
 
 
 dotennv.config();
@@ -32,6 +37,11 @@ if(process.env.NODE_ENV === 'production') {
 app.get('/health', health)
 app.post('/signup', signupPost)
 app.post('/login', loginPost)
+app.post('/subscription', createSubscription)
+app.get('/subscription', getSubscription)
+app.put('/subscription/:id', updateSubscription)
+app.delete('/subscription/:id', subscriptionDelete)
+
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
