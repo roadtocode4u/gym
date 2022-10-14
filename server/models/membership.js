@@ -10,7 +10,6 @@ const membershipSchema = mongoose.Schema({
     age: {
         type: Number,
         required: [true, "Age cannot be empty"],
-        index: true,
     },
     gender: {
         type: String,
@@ -18,43 +17,24 @@ const membershipSchema = mongoose.Schema({
     },
     height: {
         type: Number,
-        default: true
+        required: [true, "Height cannot be empty"],
     },
     weight: {
         type: Number,
-        default: true
+        required: [true, "Weight cannot be empty"],
     },
     BMI: {
         type: Number,
-        default: true
+        required: [true, "BMI cannot be empty"],
     },
     timeSlot: {
         type: String,
-        default: true
     },
     plan: {
         type: String,
-        default: true
     },
     description: {
         type: String,
-        default: true
-    },
-    duration: {
-        type: Number,
-        required: [true, "Membership Duration cannot be empty"],
-    },
-    amount: {
-        type: String,
-        required: [true, "Amount cannot be empty"],
-    },
-    paymentMethod: {
-        type: String,
-        required: [true, "Membership Payment Method cannot be empty"],
-    },
-    paymentDate: {
-        type: String,
-        required: [true, "Membership Payment Date cannot be empty"],
     },
     isActive: {
         type: Boolean,
