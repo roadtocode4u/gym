@@ -1,22 +1,6 @@
 import Subscription from "../models/Subscription.js";
 import User from "../models/User.js";
 
-export const getUserById = async (req, res) => {
-  const user = await User.findById(req.params.id);
-  if (user) {
-    return res.send({
-      success: true,
-      message: "User fetched successfully",
-      data: user,
-    });
-  }
-  return res.send({
-    success: false,
-    message: "User not fetched",
-    data: user,
-  });
-};
-
 export const createSubscription = async (req, res) => {
   const { user, plan, duration, amount, paymentMethod } =
     req.body;
