@@ -99,7 +99,7 @@ function Signup() {
                 <div className="mb-4">
                   <button
                     type="button"
-                    className="custom-btn  btn-lg btn-signup mt-3"
+                    className="signup-btn  btn-lg btn-signup mt-3 w-100"
                     onClick={addUser}
                   >
                     SignUp
