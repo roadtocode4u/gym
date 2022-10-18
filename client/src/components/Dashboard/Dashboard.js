@@ -20,10 +20,10 @@ function Dashboard() {
         </div>
 
         <div className="row">
-        <DashboardUserMenu title="menu1"/>
-        <DashboardUserMenu title="menu2" />
-        <DashboardUserMenu title="menu3"/>
-        <DashboardUserMenu title="menu4"/>
+        <DashboardUserMenu title="menu1" DashImg={ImgCat}/>
+        <DashboardUserMenu title="menu2" DashImg={ImgCat}/>
+        <DashboardUserMenu title="menu3" DashImg={ImgCat}/>
+        <DashboardUserMenu title="menu4" DashImg={ImgCat}/>
         </div>
       </div>
     </>
