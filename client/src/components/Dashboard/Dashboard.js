@@ -1,7 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import catImage from "./img/cat-image.jpg";
-import imgcat from "./img/cat-image.jpg";
+import ImgCat from "./img/cat-image.jpg";
 
 function Dashboard() {
   return (
@@ -14,7 +13,7 @@ function Dashboard() {
               <h3>Good Morning, Anand...</h3>
             </div>
             <div className="col-md-2">
-              <img className="dashboard-img" src={catImage} alt="" />
+              <img className="dashboard-img" src={ImgCat} alt="" />
             </div>
           </div>
         </div>
@@ -26,7 +25,7 @@ function Dashboard() {
                 <h4 className="user-dashboard-title">Dashboard</h4>
                 <img
                   className="img-dashboard-user float-end"
-                  src={imgcat}
+                  src={ImgCat}
                   alt=""
                 />
               </div>
@@ -39,7 +38,7 @@ function Dashboard() {
                 <h4 className="user-dashboard-title">Dashboard</h4>
                 <img
                   className="img-dashboard-user float-end"
-                  src={imgcat}
+                  src={ImgCat}
                   alt=""
                 />
               </div>
@@ -52,7 +51,7 @@ function Dashboard() {
                 <h4 className="user-dashboard-title">Dashboard</h4>
                 <img
                   className="img-dashboard-user float-end"
-                  src={imgcat}
+                  src={ImgCat}
                   alt=""
                 />
               </div>
@@ -65,7 +64,7 @@ function Dashboard() {
                 <h4 className="user-dashboard-title">Dashboard</h4>
                 <img
                   className="img-dashboard-user float-end"
-                  src={imgcat}
+                  src={ImgCat}
                   alt=""
                 />
               </div>
