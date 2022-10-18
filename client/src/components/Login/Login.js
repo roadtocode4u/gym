@@ -18,7 +18,7 @@ export default  function Login() {
       // save user data in localStorage to access current user
       localStorage.setItem('currentUser', JSON.stringify(response.data.data))
       alert("Login Successfully")
-      navigate('/')
+      navigate('/Dashboard')
     }
     else {
       alert(response.data.message)
