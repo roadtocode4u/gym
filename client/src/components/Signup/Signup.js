@@ -40,7 +40,7 @@ function Signup() {
     <div className="signup-background">
       <div className="container">
         <div className="title-container">
-          <h1 className="text-center">Sign-Up Form</h1>
+          <h1 className="text-center">Sign-Up</h1>
         </div>
         <div className="admin-signup">
           <div className="row">

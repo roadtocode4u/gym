@@ -1,5 +1,22 @@
-.user-card{
-    padding: 20px;
-    background-color: aqua;
-    border-radius: 15px;
+.user-card {
+  padding: 10px;
+  background-color: #0093e9;
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+}
+.dashboard-img {
+  width: 40px;
+  float: right;
+}
+.img-dashboard-user {
+  height: 100px;
+}
+.user-dashboard-container {
+  background-color: bisque;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 5px 1px gray;
 }

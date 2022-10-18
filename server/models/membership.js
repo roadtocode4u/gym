@@ -41,7 +41,6 @@ const membershipSchema = mongoose.Schema({
         required: [true, "Subscription reference cannot be empty"],
         index: true,
     }
-
 });
 
 const Membership = mongoose.model("Membership", membershipSchema);

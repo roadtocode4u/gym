@@ -32,7 +32,7 @@ export default  function Login() {
       <div className="signup-background">
         <div className="container">
           <div className="title-container">
-            <h1 className="text-center">Login-Form</h1>
+            <h1 className="text-center">Login</h1>
           </div>
           <div className="admin-login">
             <div className="row">
