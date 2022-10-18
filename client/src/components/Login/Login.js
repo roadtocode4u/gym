@@ -1,14 +1,8 @@
-import React , {useState}from 'react'
-import {useNavigate} from 'react-router-dom'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import  ImgLoginGirl from './img/login-girl.png';
 import "./Login.css";
-
-import Workout from "./img/gymlogin.png";
-
-function Login() {
 
 export default  function Login() {
   const navigate = useNavigate();
@@ -38,7 +32,7 @@ export default  function Login() {
       <div className="signup-background">
         <div className="container">
           <div className="title-container">
-            <h1 className="text-center">Login-Form</h1>
+            <h1 className="text-center">Login</h1>
           </div>
           <div className="admin-login">
             <div className="row">
@@ -80,14 +74,3 @@ export default  function Login() {
        </>
   );
 }
-
-
-<div className='container'>
-  <div className='row'>
-    <div className='col-md-12'>
-      <div className='card'>
-        hello
-      </div>
-    </div>
-  </div>
-</div>
