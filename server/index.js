@@ -1,5 +1,5 @@
 import express from 'express';
-import dotennv from 'dotenv';
+import dotenv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
 
@@ -7,9 +7,10 @@ import {health} from "./controllers/health.js";
 import {signupPost} from "./controllers/signup.js";
 import {loginPost} from "./controllers/login.js";
 import {membershipPost} from "./controllers/membership.js";
-import {userGet} from "./controllers/membership.js";
+import {membershipGet} from "./controllers/membership.js";
 
-dotennv.config();
+
+dotenv.config();
 const app = express();
 app.use(express.json());
 
@@ -34,7 +35,8 @@ app.get('/health', health)
 app.post('/signup', signupPost)
 app.post('/login', loginPost)
 app.post('/membership', membershipPost)
-app.get('/membership', userGet)
+app.get('/membership', membershipGet)
+
 
 
 app.listen(PORT, () => {

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const membershipSchema = mongoose.Schema({
-    user: {
+    userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: [true, "User reference cannot be empty"],

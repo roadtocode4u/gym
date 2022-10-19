@@ -1,10 +1,15 @@
-import Membership from "../models/membership.js";
+import Membership from "../models/Membership.js";
 import User from "../models/User.js";
 
 export const membershipPost = async (req, res) => {
-    const {user, age, gender, height, weight, BMI, timeSlot, plan, description, isActive, subscription } = req.body;
-    const membership = await Membership.create({
-        user,
+    const { userId, age, gender, height, weight, BMI, timeSlot, plan, description, isActive, subscription} = req.body;
+    const user = await User.findById(userId);
+    if (!user) {
+        return res.json({ status:false, message: "User not found" });
+    }
+
+    const membership = new Membership({
+        userId,
         age,
         gender,
         height,
@@ -14,36 +19,28 @@ export const membershipPost = async (req, res) => {
         plan,
         description,
         isActive,
-        subscription
-    })
-    if (membership) {
-        return res.send({
-            status: true,
-            message: "Membership created successfully",
-            data: membership
-        })
-    }
-    else {
-        return res.send({
-            status: false,
-            message: "Membership not created",
-        })
-    }
-}
+        subscription,
+    });
 
-export const userGet = async (req, res) => {
-    const user = await User.findOne({});
-    if (user) {
-        return res.send({
-            status: true,
-            message: "User found",
-            data: user
-        })
+    const savedMembership = await membership.save();
+    res.json({ 
+        status: true, 
+        data: savedMembership,
+        message: "Membership created successfully"
+    });
+};
+
+export const membershipGet = async (req, res) => {
+    const { userId } = req.body;
+    const user = await User.findById(userId);
+    if (!user) {
+        return res.json({ status:false, message: "User not found" });
     }
-    else {
-        return res.send({
-            status: false,
-            message: "User not found",
-        })
-    }
+
+    const membership = await Membership.find({ userId: userId });
+    res.json({
+        status: true,
+        data: membership,
+        message: "Membership fetched successfully"
+    });
 }
