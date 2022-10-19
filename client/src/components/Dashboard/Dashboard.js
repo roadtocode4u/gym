@@ -3,6 +3,7 @@ import DashboardUserMenu from "../DashboardUserMenu/DashboardUserMenu";
 import "./Dashboard.css";
 import ImgCat from "./img/cat-image.jpg";
 import getUser from "./../../utils/getUser";
+import {Link} from 'react-router-dom';
 
 function Dashboard() {
   const currentUser = getUser();
@@ -28,10 +29,11 @@ function Dashboard() {
         </div>
 
         <div className="row">
-        <DashboardUserMenu title="menu1" DashImg={ImgCat}/>
-        <DashboardUserMenu title="menu2" DashImg={ImgCat}/>
-        <DashboardUserMenu title="menu3" DashImg={ImgCat}/>
-        <DashboardUserMenu title="menu4" DashImg={ImgCat}/>
+          <DashboardUserMenu title="Exercise" DashImg={ImgCat} MenuLink="/exercise"/>
+          
+        <DashboardUserMenu title="menu2" DashImg={ImgCat} MenuLink="/nutrians"/>
+        <DashboardUserMenu title="menu3" DashImg={ImgCat} MenuLink="/chat"/>
+        <DashboardUserMenu title="menu4" DashImg={ImgCat} MenuLink="/exercise"/>
         </div>
       </div>
     </>
