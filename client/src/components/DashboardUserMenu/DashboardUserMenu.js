@@ -9,7 +9,7 @@ export default function DashboardUserMenu(props) {
                 <h4 className="user-dashboard-title">{props.title}</h4>
                 <img
                   className="img-dashboard-user float-end"
-                //   src={ImgCat}
+                  src={props.DashImg}
                   alt=""
                 />
               </div>
