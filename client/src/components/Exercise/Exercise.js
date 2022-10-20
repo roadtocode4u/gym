@@ -10,8 +10,10 @@ import ExciseImg5 from "./img/pushups-exercise.png";
 export default function Exercise() {
   return (
     <>
+
     {/* Exercise Menu */}
       <h1 className="text-center  p-2 exercise-title mt-2">Exercise...💪🤸‍♀️</h1>
+
       <div className="container">
         <div>
           <h2>Best Exercises to Help Build Muscle...</h2>
@@ -30,6 +32,7 @@ export default function Exercise() {
             also help you burn fat and lose weight in the long run.
           </p>
         </div>
+
         <div>
           <h1 className="text-center h1-heading mt-5">
             <b>Different types of exercise to build the muscles</b>
@@ -78,7 +81,7 @@ export default function Exercise() {
           <div className="text-center mt-4">
           <img className="img-fluid pushups-img" src={ExciseImg4} alt="" />
           </div>
-          
+
           <p className="paragraph-text mt-4">
             Burpees are a must if you want to know how to build muscle fast.
             This full-body exercise consists of planks, squats, and jumps, all
@@ -104,6 +107,7 @@ export default function Exercise() {
               height. Not sure if you’re underweight? Use this body mass index
               (BMI) calculatorTrusted Source to find out.
             </p>
+
             <p className="paragraph-text mt-4">
               Regular exercise is one of the most important steps to bulk up.
               But as with losing weight, gaining weight should be a part of a
@@ -171,6 +175,7 @@ export default function Exercise() {
                 Pull yourself up enough to hang off the bar so that your feet
                 aren’t touching the ground and your arms are straight.
               </li>
+
               <li className="paragraph-text">
                 Continue to pull yourself up until your chin is above the bar.
               </li>
@@ -190,7 +195,7 @@ export default function Exercise() {
             className="img-fluid pushups-img" alt="Responsive Image"
             width="800" />
             </div>
-            
+
             <p className="paragraph-text">
               This exercise helps build muscle in your butt and legs, especially
               your quadriceps femoris (quads) muscles.
@@ -254,6 +259,16 @@ export default function Exercise() {
           </div>
         </div>
       </div>
-    </>
-  );
+</>
+);
 }
+
+
+
+
+
+
+
+
+
+
