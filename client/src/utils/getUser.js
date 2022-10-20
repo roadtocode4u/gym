@@ -1,4 +1,4 @@
 export default function getUser(){
-const  currentUser = localStorage.getItem('currentUser')
+const  currentUser = JSON.parse(localStorage.getItem('currentUser')) || null
 return currentUser
 }

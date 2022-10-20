@@ -14,26 +14,31 @@ function NavBar() {
           <div className="justify-content-between nav-right">
             <div className="navbar-nav p-3 float-right">
               <a
-                href="index.html"
+                href="/"
                 className="nav-item nav-link active text-light"
               >
                 Home
               </a>
-              <a href="about.html" className="nav-item nav-link">
+              <a href="/" className="nav-item nav-link">
                 About Us
               </a>
-              <a href="feature.html" className="nav-item nav-link">
+              <a href="/" className="nav-item nav-link">
                 Our Features
               </a>
-              <a href="class.html" className="nav-item nav-link">
+              <a href="/" className="nav-item nav-link">
                 Classes
               </a>
-              <a href="contact.html" className="nav-item nav-link">
-                Contact
+            
+              <a  href="/signup" className="nav-item nav-link">
+                Signup
               </a>
-              <a href="" className="icon">
-                <i className="fa fa-bars"></i>
+
+              <a href="/login" className="nav-item nav-link">
+                Login
               </a>
+
+              
+
             </div>
           </div>
         </nav>

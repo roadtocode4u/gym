@@ -29,25 +29,30 @@
 }
 
 .nav-bar a {
-  color: var(--light) !important;
+  color: var(--light);
   margin: auto 10px auto 10px;
 }
 
 .nav-bar a:hover {
-  color: var(--secondary) !important;
+  color: var(--secondary);
   text-decoration: underline;
   transition: 0.3s;
-
 }
 
 .navbar a.active {
-  color: var(--secondary) !important;
+  color: var(--secondary);
 }
 
 .navbar a.icon {
   float: right;
   display: none;
 }
+
+/* #signup-btn a:hover{
+  color: var(--secondary) !important;
+  text-decoration: underline;
+  transition: 0.3s;
+} */
 
 @media screen and (max-width: 768px) {
   .navbar {

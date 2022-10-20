@@ -22,7 +22,7 @@ function Home() {
       {/* Carousel Start */}
 <div className="carousel">
       <Carousel>
-        <Carousel.Item interval={1000}>
+        <Carousel.Item interval={3000}>
           <img className="d-block w-100" src={Carousel1} alt="First slide" />
           <Carousel.Caption>
             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -39,7 +39,7 @@ function Home() {
             </div>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={1500}>
+        <Carousel.Item interval={3000}>
           <img className="d-block w-100" src={Carousel2} alt="Second slide" />
           <Carousel.Caption>
             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -56,7 +56,7 @@ function Home() {
             </div>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item interval={3000}>
           <img className="d-block w-100" src={Carousel3} alt="Third slide" />
           <Carousel.Caption>
             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">

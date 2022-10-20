@@ -1,10 +1,17 @@
 import Subscription from "../models/Subscription.js";
+import User from "../models/User.js";
+
+
+
+
 
 export const createSubscription = async (req, res) => {
-  const { user, plan, duration, amount, paymentMethod } =
+
+
+  const {userId, plan, duration, amount, paymentMethod } =
     req.body;
   const subscription = await Subscription.create({
-    user,
+    userId,
     plan,
     duration,
     amount,
@@ -25,12 +32,16 @@ export const createSubscription = async (req, res) => {
 };
 
 export const getSubscription = async (req, res) => {
-  const subscription = await Subscription.find({});
+
+  const user = await User.findById(req.params.id);
+  
+  const {userId, fullName, email, phone} = req.body;
+  const subscription = await Subscription.findById(req.params.id || userId);
   if (subscription) {
     return res.send({
       success: true,
       message: "Subscription fetched successfully",
-      data: subscription,
+      data: fullName, email, phone, subscription,
     });
   }
   return res.send({
@@ -39,6 +50,7 @@ export const getSubscription = async (req, res) => {
     data: subscription,
   });
 };
+
 
 export const updateSubscription = async (req, res) => {
   const subscription = await Subscription.findByIdAndUpdate(
@@ -60,18 +72,18 @@ export const updateSubscription = async (req, res) => {
   });
 };
 
-export const subscriptionDelete = async (req, res) => {
-  const subscription = await Subscription.findByIdAndDelete(req.params.id);
-  if (subscription) {
-    return res.send({
-      success: true,
-      message: "Subscription deleted successfully",
-      data: subscription,
-    });
-  }
-  return res.send({
-    success: false,
-    message: "Subscription not deleted",
-    data: subscription,
-  });
-}
+// export const subscriptionDelete = async (req, res) => {
+//   const subscription = await Subscription.findByIdAndDelete(req.params.id);
+//   if (subscription) {
+//     return res.send({
+//       success: true,
+//       message: "Subscription deleted successfully",
+//       data: subscription,
+//     });
+//   }
+//   return res.send({
+//     success: false,
+//     message: "Subscription not deleted",
+//     data: subscription,
+//   });
+// }

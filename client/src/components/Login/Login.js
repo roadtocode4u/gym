@@ -18,7 +18,7 @@ export default  function Login() {
       // save user data in localStorage to access current user
       localStorage.setItem('currentUser', JSON.stringify(response.data.data))
       alert("Login Successfully")
-      navigate('/')
+      navigate('/dashboard')
     }
     else {
       alert(response.data.message)
@@ -32,7 +32,7 @@ export default  function Login() {
       <div className="signup-background">
         <div className="container">
           <div className="title-container">
-            <h1 className="text-center">Login-Form</h1>
+            <h1 className="text-center">Login</h1>
           </div>
           <div className="admin-login">
             <div className="row">
@@ -57,7 +57,7 @@ export default  function Login() {
                   </div>
 
                   <div className="mb-4">
-                    <button type="button" className="custom-btn  btn-lg btn-login mt-3" onClick={loginUser}>Login</button>
+                    <button type="button" className="login-btn  btn-lg btn-login mt-3 w-100" onClick={loginUser}>Login</button>
                   </div>
                   <h5 className="text-center mt-3">
                     {" "}

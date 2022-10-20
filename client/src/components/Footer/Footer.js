@@ -24,8 +24,8 @@ function Footer() {
                     <a className=" mb-2" href="#"><i className="fa fa-angle-right "></i>Home</a>
                     <a className="mb-2" href="#"><i className="fa fa-angle-right "></i>About Us</a>
                     <a className=" mb-2" href="#"><i className="fa fa-angle-right "></i>Our Features</a>
-                    <a className="mb-2" href="#"><i className="fa fa-angle-right "></i>Classes</a>
-                    <a className="" href="#"><i className="fa fa-angle-right "></i>Contact Us</a>
+                    <a className="mb-2" href="/signup"><i className="fa fa-angle-right "></i>Signup</a>
+                    <a className="" href="/login"><i className="fa fa-angle-right "></i>Login</a>
                 </div>
             </div>
             <div className="col-lg-3 col-md-6 mb-5">

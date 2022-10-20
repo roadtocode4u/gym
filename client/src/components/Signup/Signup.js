@@ -40,7 +40,7 @@ function Signup() {
     <div className="signup-background">
       <div className="container">
         <div className="title-container">
-          <h1 className="text-center">Sign-Up Form</h1>
+          <h1 className="text-center">Sign-Up</h1>
         </div>
         <div className="admin-signup">
           <div className="row">
@@ -99,7 +99,7 @@ function Signup() {
                 <div className="mb-4">
                   <button
                     type="button"
-                    className="custom-btn  btn-lg btn-signup mt-3"
+                    className="signup-btn  btn-lg btn-signup mt-3 w-100"
                     onClick={addUser}
                   >
                     SignUp

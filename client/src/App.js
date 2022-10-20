@@ -4,6 +4,8 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Dashboard from './components/Dashboard/Dashboard';
+import Membership from './components/Membership/Membership';
+import Contact from './components/Contact/Contact';
 
 
 function App() {
@@ -14,7 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/Dashboard" element={<Dashboard />}/>
+        <Route path="/membership" element={<Membership />} />
+        <Route path="/dashboard" element={<Dashboard />}/>
+        <Route path="/contact" element={<Contact />}/>
       </Routes>
       </BrowserRouter>
     </div>
