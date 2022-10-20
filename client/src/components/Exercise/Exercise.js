@@ -10,6 +10,7 @@ import ExciseImg5 from "./img/pushups-exercise.png";
 export default function Exercise() {
   return (
     <>
+    {/* Exercise Menu */}
       <h1 className="text-center  p-2 exercise-title mt-2">Exercise...💪🤸‍♀️</h1>
       <div className="container">
         <div>
