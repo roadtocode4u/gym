@@ -10,16 +10,18 @@ import ExciseImg5 from "./img/pushups-exercise.png";
 export default function Exercise() {
   return (
     <>
+    {/* Exercise Menu */}
       <h1 className="text-center  p-2 exercise-title mt-2">Exercise...💪🤸‍♀️</h1>
       <div className="container">
         <div>
           <h2>Best Exercises to Help Build Muscle...</h2>
+          <div className="text-center mt-4">
           <img
             src={ExciseImg1}
-            className="img-fluid w-100"
+            className="img-fluid pushups-img"
             alt="Responsive image"
           />
-          {/* <img  width={700} height={400} src={ExciseImg1} className="img-fluid" alt="Responsive image"  /> */}
+          </div>
           <p className="paragraph-text mt-4">
             If you’re dreaming of lean and muscular physic, then make sure your
             workout includes exercises to build muscle. Despite what many women
@@ -35,8 +37,10 @@ export default function Exercise() {
           <li className="push-ups mt-3">
             <b>Push-Ups</b>
           </li>
-          <img className="img-fluid w-100" src={ExciseImg2} alt="" />
-          <p className="paragraph-text">
+          <div className="text-center mt-4">
+          <img className="img-fluid pushups-img" src={ExciseImg2} alt="" />
+          </div>
+          <p className="paragraph-text mt-4">
             If you’re looking for exercises to build muscle that doesn’t require
             any equipment, then push-ups are the way to go. While they mainly
             work your upper body (triceps, pectoral muscles, and shoulders),
@@ -53,8 +57,11 @@ export default function Exercise() {
           <li className="push-ups mt-3">
             <b>Kettlebell Squats</b>
           </li>
-          <img className="img-fluid w-100" src={ExciseImg3} alt="" />
-          <p className="paragraph-text">
+          <div className="text-center mt-4">
+          <img className="img-fluid pushups-img" src={ExciseImg3} alt="" />
+          </div>
+          
+          <p className="paragraph-text mt-4">
             Normal squats are great for building muscle in your lower body. But
             add a kettlebell to the mix, and you’ll see even more progress! Just
             that little bit of weight will help you work your upper body and
@@ -68,8 +75,11 @@ export default function Exercise() {
           <li className="push-ups mt-3">
             <b>Burpees</b>
           </li>
-          <img className="img-fluid w-100" src={ExciseImg4} alt="" />
-          <p className="paragraph-text">
+          <div className="text-center mt-4">
+          <img className="img-fluid pushups-img" src={ExciseImg4} alt="" />
+          </div>
+          
+          <p className="paragraph-text mt-4">
             Burpees are a must if you want to know how to build muscle fast.
             This full-body exercise consists of planks, squats, and jumps, all
             of which work each of your muscle groups! If you do them long
@@ -110,9 +120,10 @@ export default function Exercise() {
             <li className="push-ups mt-3">
               <b>Pushups</b>
             </li>
+            <div className="text-center">
             <img src={ExciseImg5}
-            className="img-fluid" alt="Responsive Image"
-            width="800" />
+            className="img-fluid pushups-img" alt="Responsive Image" />
+            </div>
             {/* <img className="img-fluid w-100"  src={ExciseImg2} alt=''/> */}
             <p className="paragraph-text">
               Pushups are simple and help build muscle in your arms and
@@ -141,9 +152,11 @@ export default function Exercise() {
             <li className="push-ups mt-3">
               <b>Pullups</b>
             </li>
+            <div className="text-center">
             <img src={ExciseImg5}
-            className="img-fluid" alt="Responsive Image"
+            className="img-fluid pushups-img" alt="Responsive Image"
             width="800" />
+            </div>
             <p className="paragraph-text">
               You’ll need some kind of pullup bar or sturdy cylindrical object
               to do pullups. Otherwise, this exercise is a simple way to build
@@ -172,9 +185,12 @@ export default function Exercise() {
             <li className="push-ups mt-3">
               <b>Squats</b>
             </li>
+            <div className="text-center">
             <img src={ExciseImg5}
-            className="img-fluid" alt="Responsive Image"
+            className="img-fluid pushups-img" alt="Responsive Image"
             width="800" />
+            </div>
+            
             <p className="paragraph-text">
               This exercise helps build muscle in your butt and legs, especially
               your quadriceps femoris (quads) muscles.
@@ -204,9 +220,12 @@ export default function Exercise() {
             <li className="push-ups mt-3">
               <b>Overhead press</b>
             </li>
+            <div className="text-center">
             <img src={ExciseImg5}
-            className="img-fluid" alt="Responsive Image"
+            className="img-fluid pushups-img" alt="Responsive Image"
             width="800" />
+            </div>
+            
             <p className="paragraph-text">
               You’ll need a weighted bar to perform this exercise. Overhead
               presses will help bulk up the muscles in your arms, shoulders,
