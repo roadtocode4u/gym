@@ -7,3 +7,17 @@
     color: white;
     
   }
+
+  .nutrains-img{
+    width: 500px;
+    border-radius:12px;
+  }
+
+  .nutrian-menu{
+    font-size: 30px;
+    font-family: bold;
+  }
+
+  .paragraph-text{
+    font-size: 20px;
+  }
