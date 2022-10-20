@@ -6,6 +6,7 @@ import Signup from './components/Signup/Signup';
 import Dashboard from './components/Dashboard/Dashboard';
 import Membership from './components/Membership/Membership';
 import Exercise from './components/Exercise/Exercise';
+import Nutrians from './components/Nutrians/Nutrians';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/membership" element={<Membership />} />
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/exercise" element={<Exercise />}/>
+        <Route path="/nutrians" element={<Nutrians />}/>
       </Routes>
       </BrowserRouter>
     </div>

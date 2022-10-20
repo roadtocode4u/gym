@@ -29,9 +29,8 @@ function Dashboard() {
         </div>
 
         <div className="row">
-          <DashboardUserMenu title="Exercise" DashImg={ImgCat} MenuLink="/exercise"/>
-          
-        <DashboardUserMenu title="menu2" DashImg={ImgCat} MenuLink="/nutrians"/>
+        <DashboardUserMenu title="Exercise" DashImg={ImgCat} MenuLink="/exercise"/>
+        <DashboardUserMenu title="Nutrians" DashImg={ImgCat} MenuLink="/nutrians"/>
         <DashboardUserMenu title="menu3" DashImg={ImgCat} MenuLink="/chat"/>
         <DashboardUserMenu title="menu4" DashImg={ImgCat} MenuLink="/exercise"/>
         </div>
