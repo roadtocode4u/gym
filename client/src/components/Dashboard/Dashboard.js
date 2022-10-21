@@ -31,7 +31,7 @@ function Dashboard() {
         <div className="row">
         <DashboardUserMenu title="Exercise" DashImg={ImgCat} MenuLink="/exercise"/>
         <DashboardUserMenu title="Nutrians" DashImg={ImgCat} MenuLink="/nutrians"/>
-        <DashboardUserMenu title="menu3" DashImg={ImgCat} MenuLink="/chat"/>
+        <DashboardUserMenu title="Insturement" DashImg={ImgCat} MenuLink="/insturement"/>
         <DashboardUserMenu title="menu4" DashImg={ImgCat} MenuLink="/exercise"/>
         </div>
       </div>
