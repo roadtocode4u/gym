@@ -1,0 +1,17 @@
+.insturement-title{
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px gray;
+    padding: 1px;
+    border-radius: 15px;
+    background: var(--primary);
+    color: white;
+    
+  }
+  .paragraph-text{
+    font-size: 20px;
+  }
+
+  .insturement-img{
+    width: 500px;
+    border-radius: 20px;
+  }
